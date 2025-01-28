@@ -1,0 +1,91 @@
+@import "~normalize.css";
+
+body {
+  background-color: #C4C4C4;
+}
+
+.app {
+  width: 500px;
+  margin: 32px auto;
+
+  &__repositories {
+    margin-top: 32px;
+  }
+}
+
+.search {
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 61px;
+    font-size: 48px;
+    padding-left: 12px;
+  }
+
+  &__find-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #E3E3E3;
+    font-size: 30px;
+  }
+
+  &__find-elem {
+    border: 2px solid black;
+    height: 44px;
+    padding-left: 12px;
+
+    &:hover {
+      background-color: #65CDF9;
+    }
+  }
+}
+
+.repositories {
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    background-color: #E27BEB;
+    font-size: 24px;
+  }
+
+  &__find-elem {
+    list-style: none;
+    border: 1px solid #000000;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  &__btn-close {
+    border: 0;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 52px;
+      background-color: red;
+      top: -7px;
+      right: 17px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
